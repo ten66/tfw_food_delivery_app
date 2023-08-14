@@ -19,9 +19,8 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kWhiteColor,
         primaryColor: kPrimaryColor,
         textTheme: const TextTheme(
-          headlineSmall: TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
+          headlineSmall: TextStyle(fontWeight: FontWeight.bold),
+          labelLarge: TextStyle(fontWeight: FontWeight.bold),
         ),
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -57,7 +56,29 @@ class HomeScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
+          Row(
+            children: [
+              CategoryTitle(),
+            ],
+          ),
         ],
+      ),
+    );
+  }
+}
+
+class CategoryTitle extends StatelessWidget {
+  const CategoryTitle({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 20),
+      child: Text(
+        'All',
+        style: Theme.of(context).textTheme.labelLarge,
       ),
     );
   }
