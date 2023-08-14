@@ -18,7 +18,12 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
         scaffoldBackgroundColor: kWhiteColor,
         primaryColor: kPrimaryColor,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        textTheme: const TextTheme(
+          headlineSmall: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       home: const HomeScreen(),
@@ -33,6 +38,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: const EdgeInsets.only(right: 20, top: 50),
@@ -42,6 +48,13 @@ class HomeScreen extends StatelessWidget {
                 'assets/icons/menu.svg',
                 height: 11,
               ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Text(
+              'Simple way to find \nTasty food',
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
         ],
