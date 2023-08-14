@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:tfw_food_delivery_app/constants.dart';
 
 void main() {
@@ -30,6 +31,21 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(right: 20, top: 50),
+            child: Align(
+              alignment: Alignment.topRight,
+              child: SvgPicture.asset(
+                'assets/icons/menu.svg',
+                height: 11,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
