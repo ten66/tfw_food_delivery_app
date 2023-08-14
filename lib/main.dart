@@ -56,10 +56,17 @@ class HomeScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
-          Row(
-            children: [
-              CategoryTitle(title: 'All', active: true),
-            ],
+          const SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                CategoryTitle(title: 'All', active: true),
+                CategoryTitle(title: 'Italian'),
+                CategoryTitle(title: 'Asian'),
+                CategoryTitle(title: 'Chinese'),
+                CategoryTitle(title: 'Burgers'),
+              ],
+            ),
           ),
         ],
       ),
@@ -80,7 +87,10 @@ class CategoryTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20),
+      padding: const EdgeInsets.only(
+        left: 20,
+        right: 30,
+      ),
       child: Text(
         title,
         style: Theme.of(context).textTheme.labelLarge?.copyWith(
