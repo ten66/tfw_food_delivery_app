@@ -106,6 +106,19 @@ class HomeScreen extends StatelessWidget {
                     color: kPrimaryColor.withOpacity(.15),
                   ),
                 ),
+                Positioned(
+                  top: 0,
+                  left: -50,
+                  child: Container(
+                    height: 184,
+                    width: 276,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('assets/images/image_1.png'),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
