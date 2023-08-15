@@ -80,6 +80,30 @@ class HomeScreen extends StatelessWidget {
             ),
             child: SvgPicture.asset('assets/icons/search.svg'),
           ),
+          Container(
+            height: 400,
+            width: 270,
+            child: Stack(
+              children: [
+                Container(
+                  height: 380,
+                  width: 250,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(34),
+                    color: kPrimaryColor.withOpacity(.06),
+                  ),
+                ),
+                Container(
+                  height: 181,
+                  width: 181,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: kPrimaryColor.withOpacity(.15),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
