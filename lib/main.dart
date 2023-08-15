@@ -68,6 +68,18 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
+          Container(
+            alignment: Alignment.centerLeft,
+            margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+            height: 50,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: kBorderColor),
+            ),
+            child: SvgPicture.asset('assets/icons/search.svg'),
+          ),
         ],
       ),
     );
