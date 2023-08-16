@@ -156,12 +156,17 @@ class HomeScreen extends StatelessWidget {
                             color: kTextColor.withOpacity(.4),
                           ),
                         ),
+                        const SizedBox(height: 16),
                         Text(
                           'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin',
                           maxLines: 4,
                           style: TextStyle(
                             color: kTextColor.withOpacity(.65),
                           ),
+                        ),
+                        const SizedBox(height: 16),
+                        const Text(
+                          '420Kcal',
                         ),
                       ],
                     ),
