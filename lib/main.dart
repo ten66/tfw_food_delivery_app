@@ -98,6 +98,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+                // Rounded background
                 Positioned(
                   top: 10,
                   left: 10,
@@ -110,17 +111,30 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+                // Food Image
                 Positioned(
                   top: 0,
                   left: -50,
                   child: Container(
                     height: 184,
                     width: 276,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage('assets/images/image_1.png'),
                       ),
                     ),
+                  ),
+                ),
+                // Price
+                Positioned(
+                  right: 20,
+                  top: 80,
+                  child: Text(
+                    '\$20',
+                    style: Theme.of(context)
+                        .textTheme
+                        .headlineSmall!
+                        .copyWith(color: kPrimaryColor),
                   ),
                 ),
               ],
