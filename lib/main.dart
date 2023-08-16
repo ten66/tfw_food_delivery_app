@@ -81,7 +81,16 @@ class HomeScreen extends StatelessWidget {
             ),
             child: SvgPicture.asset('assets/icons/search.svg'),
           ),
-          const FoodCard(),
+          const SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                FoodCard(),
+                FoodCard(),
+                SizedBox(width: 20),
+              ],
+            ),
+          ),
         ],
       ),
     );
