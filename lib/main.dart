@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
         textTheme: const TextTheme(
           headlineSmall: TextStyle(fontWeight: FontWeight.bold),
           labelLarge: TextStyle(fontWeight: FontWeight.bold),
+          titleMedium: TextStyle(fontWeight: FontWeight.bold),
         ),
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -135,6 +136,35 @@ class HomeScreen extends StatelessWidget {
                         .textTheme
                         .headlineSmall!
                         .copyWith(color: kPrimaryColor),
+                  ),
+                ),
+                Positioned(
+                  top: 201,
+                  left: 40,
+                  child: Container(
+                    width: 210,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Vegan salad bowl',
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                        Text(
+                          'With red tomato',
+                          style: TextStyle(
+                            color: kTextColor.withOpacity(.4),
+                          ),
+                        ),
+                        Text(
+                          'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin',
+                          maxLines: 4,
+                          style: TextStyle(
+                            color: kTextColor.withOpacity(.65),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
