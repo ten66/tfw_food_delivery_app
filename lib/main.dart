@@ -85,8 +85,24 @@ class HomeScreen extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                FoodCard(),
-                FoodCard(),
+                FoodCard(
+                  title: "Vegan salad bowl",
+                  ingredient: 'red tomato',
+                  image: 'assets/images/image_1.png',
+                  price: 20,
+                  calories: '420Kcal',
+                  description:
+                      'Contrary to popular belief, Lorern Ipsum is not simply random text. It has roots in a piece of classical Latin',
+                ),
+                FoodCard(
+                  title: "Vegan salad bowl",
+                  ingredient: 'red tomato',
+                  image: 'assets/images/image_2.png',
+                  price: 20,
+                  calories: '420Kcal',
+                  description:
+                      'Contrary to popular belief, Lorern Ipsum is not simply random text. It has roots in a piece of classical Latin',
+                ),
                 SizedBox(width: 20),
               ],
             ),
@@ -98,8 +114,21 @@ class HomeScreen extends StatelessWidget {
 }
 
 class FoodCard extends StatelessWidget {
+  final String title;
+  final String ingredient;
+  final String image;
+  final int price;
+  final String calories;
+  final String description;
+
   const FoodCard({
     super.key,
+    required this.title,
+    required this.ingredient,
+    required this.image,
+    required this.price,
+    required this.calories,
+    required this.description,
   });
 
   @override
@@ -142,9 +171,9 @@ class FoodCard extends StatelessWidget {
             child: Container(
               height: 184,
               width: 276,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/image_1.png'),
+                  image: AssetImage(image),
                 ),
               ),
             ),
@@ -154,7 +183,7 @@ class FoodCard extends StatelessWidget {
             right: 20,
             top: 80,
             child: Text(
-              '\$20',
+              '\$$price',
               style: Theme.of(context)
                   .textTheme
                   .headlineSmall!
@@ -170,26 +199,26 @@ class FoodCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Vegan salad bowl',
+                    title,
                     style: Theme.of(context).textTheme.titleMedium,
                   ),
                   Text(
-                    'With red tomato',
+                    'With $ingredient',
                     style: TextStyle(
                       color: kTextColor.withOpacity(.4),
                     ),
                   ),
                   const SizedBox(height: 16),
                   Text(
-                    'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin',
+                    description,
                     maxLines: 4,
                     style: TextStyle(
                       color: kTextColor.withOpacity(.65),
                     ),
                   ),
                   const SizedBox(height: 16),
-                  const Text(
-                    '420Kcal',
+                  Text(
+                    calories,
                   ),
                 ],
               ),
