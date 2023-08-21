@@ -43,6 +43,34 @@ class DetailsScreen extends StatelessWidget {
                 ),
               ),
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: 'Vegan salad bowl\n',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                      TextSpan(
+                        text: 'With red tomato',
+                        style: TextStyle(
+                          color: kTextColor.withOpacity(.5),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Text(
+                  '\$20',
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineSmall!
+                      .copyWith(color: kPrimaryColor),
+                ),
+              ],
+            ),
           ],
         ),
       ),
