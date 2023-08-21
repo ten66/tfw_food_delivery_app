@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:tfw_food_delivery_app/constants.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
@@ -23,6 +24,24 @@ class DetailsScreen extends StatelessWidget {
                   height: 11,
                 ),
               ],
+            ),
+            Container(
+              margin: const EdgeInsets.symmetric(vertical: 20),
+              padding: const EdgeInsets.all(6),
+              height: 305,
+              width: 305,
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: kSecondaryColor,
+              ),
+              child: Container(
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/image_1_big.png'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
             ),
           ],
         ),
