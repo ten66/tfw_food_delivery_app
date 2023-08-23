@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tfw_food_delivery_app/constants.dart';
+import 'package:tfw_food_delivery_app/details_screen.dart';
 
 import 'widgets/category_title.dart';
 import 'widgets/food_card.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
           headlineSmall: TextStyle(fontWeight: FontWeight.bold),
           labelLarge: TextStyle(fontWeight: FontWeight.bold),
           titleMedium: TextStyle(fontWeight: FontWeight.bold),
+          bodyLarge: TextStyle(color: kTextColor),
         ),
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -101,11 +103,21 @@ class HomeScreen extends StatelessWidget {
             ),
             child: SvgPicture.asset('assets/icons/search.svg'),
           ),
-          const SingleChildScrollView(
+          SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
                 FoodCard(
+                  press: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return const DetailsScreen();
+                        },
+                      ),
+                    );
+                  },
                   title: "Vegan salad bowl",
                   ingredient: 'red tomato',
                   image: 'assets/images/image_1.png',
@@ -115,6 +127,16 @@ class HomeScreen extends StatelessWidget {
                       'Contrary to popular belief, Lorern Ipsum is not simply random text. It has roots in a piece of classical Latin',
                 ),
                 FoodCard(
+                  press: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return const DetailsScreen();
+                        },
+                      ),
+                    );
+                  },
                   title: "Vegan salad bowl",
                   ingredient: 'red tomato',
                   image: 'assets/images/image_2.png',
@@ -123,7 +145,7 @@ class HomeScreen extends StatelessWidget {
                   description:
                       'Contrary to popular belief, Lorern Ipsum is not simply random text. It has roots in a piece of classical Latin',
                 ),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
               ],
             ),
           ),
