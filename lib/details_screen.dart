@@ -15,9 +15,14 @@ class DetailsScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SvgPicture.asset(
-                  'assets/icons/backward.svg',
-                  height: 11,
+                IconButton(
+                  icon: SvgPicture.asset(
+                    'assets/icons/backward.svg',
+                    height: 11,
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
                 ),
                 SvgPicture.asset(
                   'assets/icons/menu.svg',
@@ -77,7 +82,7 @@ class DetailsScreen extends StatelessWidget {
             ),
             const Spacer(),
             Padding(
-              padding: const EdgeInsets.only(bottom: 30),
+              padding: const EdgeInsets.only(bottom: 40),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
