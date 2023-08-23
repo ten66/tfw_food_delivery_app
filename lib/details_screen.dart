@@ -74,7 +74,32 @@ class DetailsScreen extends StatelessWidget {
             const SizedBox(height: 20),
             const Text(
               "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
-            )
+            ),
+            Row(
+              children: [
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 27),
+                  decoration: BoxDecoration(
+                    color: kPrimaryColor.withOpacity(.19),
+                    borderRadius: BorderRadius.circular(27),
+                  ),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Add to bag',
+                        style: Theme.of(context).textTheme.labelLarge,
+                      ),
+                      const SizedBox(width: 30),
+                      SvgPicture.asset(
+                        'assets/icons/forward.svg',
+                        height: 11,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
