@@ -145,7 +145,7 @@ class HomeScreen extends StatelessWidget {
                   description:
                       'Contrary to popular belief, Lorern Ipsum is not simply random text. It has roots in a piece of classical Latin',
                 ),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
               ],
             ),
           ),
